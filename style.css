@@ -1,0 +1,498 @@
+@charset "utf-8";
+/*共通部分----------------*/
+
+
+html{
+	 font-size:100%;
+}
+
+body{
+	 font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	 line-height: 1.7;
+	 color:#432;
+}
+
+
+/*ヘッダー-----*/
+.page-header{
+	         position: fixed;
+             top: 0;
+              z-index: 1;
+             width: 100%;
+             background-color: #fff;
+             box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+}
+a{
+    text-decoration: none;
+	font-size:1.5rem; 
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    font-weight: 400;
+	margin-left: 15px;
+	
+}
+
+.main-nav{
+	  list-style: none;
+	  display: flex;
+	  justify-content: flex-end;
+	  padding-right: 20px;
+}
+
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #808080;
+}
+.header-nav-item a {
+  position: relative;
+}
+.header-nav-item a::before,
+.header-nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+.header-nav-item a::before {
+  right: 50%;
+}
+.header-nav-item a::after {
+  left: 50%;
+}
+.header-nav-item a:hover::before,
+.header-nav-item a:hover::after {
+  width: 50%;
+}
+
+
+/*メインヴィジュアル-----------*/
+.main-visual {
+               height: 65vh; /* 高さの調節 */
+	          
+  }
+.name-title{
+	        text-align: center;
+	        
+}
+.main-visual-subtitle{
+    text-align: center;
+    margin-top:30px;
+    font-family: bubbler-one;
+    font-style: normal;
+    font-weight: 600;
+	font-size: 1.5rem;
+}
+.main-visual-inner {
+	                padding: 0 40px;
+	                margin-top:270px;
+                 }
+
+/*ワーク----*/
+.title-works{
+	         color:#00ac9a; 
+	         height:70px; 
+             padding-top:24px;
+             text-align: center;
+             border-top:10px solid #00ac9a;
+	         border-bottom:10px solid #00ac9a;
+}
+
+.works-list1{
+	          display: flex;
+	          flex-wrap:wrap; 
+	          justify-content: center;
+	        
+}
+.works-list2{
+	          display: flex;
+	          flex-wrap:wrap;
+	          justify-content: center;
+}
+.works-list3{
+	         display: flex;
+	         flex-wrap:wrap;
+	         justify-content: center;
+}
+
+
+.works-item1 {
+  display: flex;
+  flex-wrap:wrap;
+  margin-bottom: 40px;
+  color: #333;
+  transition: 1.0s;
+  padding-left:30px; 
+}
+
+.works-item1:hover {
+  opacity: .7;
+  color: #797979;
+}
+.works-item2 {
+  display: flex;
+  flex-wrap:wrap;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  color: #333;
+  transition: 1.0s;
+}
+
+.works-item2:hover {
+  opacity: .7;
+  color: #797979;
+}
+
+.works-img img {
+  border: 3px solid #e6e6e6;
+  margin-right:1em;
+}
+
+.works-img img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain; /* この一行を追加するだけ！ */
+}
+
+.works-name {
+  /* font-size: 12px; */
+  font-size: 1.4em; 
+  font-weight: bold;
+  margin-top: 10px;
+  border: solid;
+  border-width: 0px 0px 3.5px 0px;
+  display: flex;
+}
+
+.works-info {
+  /* font-size: 10px; */
+  font-size: 1.0em;
+ 
+}
+.work-box{
+	      width:300px;
+          height:150px;}
+
+/*スキル----*/
+.skill-title{
+	         color:#00afcc; 
+	         height:70px; 
+             padding-top:24px;
+             text-align: center;
+             border-top:10px solid #00afcc;
+	         border-bottom:10px solid #00afcc;
+	         }
+.skill-list1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding-top:30px;
+
+}
+.skill-list2{
+	         display: flex;
+            flex-wrap: wrap;
+            justify-content:center;
+	       margin-bottom: 70px;
+
+}
+.skill-item1 {
+  display: flex;
+  width:480px ; 
+}
+.skill-item2 {
+  display: flex;
+  width:480px ; 
+}
+.skill-img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.skill-name1 {
+  width:290px;
+  position: relative;
+  margin-bottom: 3px;
+  height: 50px;
+ }
+
+
+
+.skill-name1:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: solid 20px #ffb833;
+  animation: border_anim 3s linear forwards;
+}
+
+
+@keyframes border_anim {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.skill-name2 {
+  width:280px;
+  position: relative;
+  margin-bottom: 3px;
+  height: 50px;
+ }
+
+
+
+.skill-name2:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: solid 20px #00bfff;
+  animation: border_anim 3s linear forwards;
+}
+
+
+@keyframes border_anim {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.graph1{
+	   margin: 0 0 0 auto;
+	   padding-top:30px;
+	   font-weight: bold;
+	   font-size:2em;
+}
+
+.skill-name3 {
+  width:250px;
+  position: relative;
+  margin-bottom: 3px;
+  height: 50px;
+ }
+
+
+
+.skill-name3:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: solid 20px #ff99cc;
+  animation: border_anim 3s linear forwards;
+}
+
+
+@keyframes border_anim {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.skill-name4 {
+  width:180px;
+  position: relative;
+  margin-bottom: 3px;
+  height: 50px;
+ }
+
+
+
+.skill-name4:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: solid 20px #9ed17d ;
+  animation: border_anim 3s linear forwards;
+}
+
+
+@keyframes border_anim {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+/*自己紹介---*/
+
+.about_title{
+	         color:#3cb37a; 
+	         height:70px; 
+             padding-top:24px;
+             text-align: center;
+             border-top:10px solid #3cb37a;
+	         border-bottom:10px solid #3cb37a;
+}
+
+.about-img img{
+	           width:270px;
+	           height:250px;
+	           border-radius: 150px;
+	           object-fit: contain;
+	           background-color: #bee0c2;
+	           margin-top:120px;
+	           margin-right: 40px;
+	           margin-left: 40px;
+	    }
+
+
+.about_name{
+	        font-size:2em;
+	        font-weight:bold;
+}
+.about_birth{
+	         margin-top:5px;
+	         font-weight:bold;
+}
+.about_school{
+	          font-weight: bold;
+}
+
+.about_explain{
+	            line-height: 1.5;                 
+}
+
+.hobby-list{
+	        margin-top: 50px;
+}
+
+.hobby_title{
+	         font-size:1.25em;
+	         font-weight:bold;
+}
+
+.about_hobby{
+	         display: flex;
+	         justify-content:flex-start;
+	         
+}
+.about_list{
+	        margin-right: 50px;
+}
+.about-inner{
+	         display: flex;
+	         flex-wrap: wrap;
+	         justify-content: center;
+	         }
+.about_info{
+	        margin-top:110px;
+	        
+	        
+	        
+}
+/*ふったー---*/
+
+footer{
+	    margin-top:100px;
+	    width:100%;
+	    height: 200px;   
+	    background-color: #e0e0e0;
+}
+
+.footer_title{
+	          font-size:1.5em;
+	           font-weight:bold;
+	           text-align: center;
+	           padding-top: 50px;
+				  
+}
+.footer_mail{
+	         font-weight:bold;
+	         text-align: center;
+}
+.footer_tel{
+	        font-weight:bold;
+	        text-align: center;
+}
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+.pc-only {
+    display: none;
+  }
+.sp-only {
+    display: block;
+	}	
+/* 見出し */
+	.main-visual{
+		         height:45vh;
+	}
+	.main-visual-inner{
+		               padding: 0 10px;
+	}	
+
+	.main-visual-subtitle{
+		                  font-size:1em; 
+	}
+/* スキル*/
+	.skill-item1{
+		         width:400px;
+	}
+	.skill-item2{
+		         width:400px;
+	}
+	.skill-name1{
+		         width: 210px;
+	}
+	.skill-name2{
+		         width: 180px;
+	}
+	.skill-name3{
+		         width: 160px;
+	}
+	.skill-name4{
+		         width:120px;
+	}
+/* 自己紹介*/
+	.about_info{
+		        padding:0 20px;
+	}
+	.hobby-list{
+		         display:flex;
+	}
+	.about_hobby{
+		        display: block;
+	}
+}
+
+/*media Queries 550
+----------------------------------------------------*/
+@media screen and (max-width: 550px) {
+	.works-item1{
+		         margin-left: 0;
+		         margin-right: 0;
+		         justify-content: center;
+	}
+	.works-item2{
+		         margin-left: 0;
+		         margin-right: 0;
+		         justify-content: center;
+	}
+										  
+}
